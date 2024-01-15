@@ -1,0 +1,43 @@
+@keyframes move {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.price {
+    white-space: nowrap;
+    animation: move infinite 10s linear;
+}
+
+@media screen and (min-width: 600px) {
+    @keyframes move-medium  {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(-60%);
+        }
+    }
+
+    .price {
+        animation: move-medium  infinite 15s linear;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    @keyframes move-large  {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(-50%);
+        }
+    }
+
+    .price {
+        animation: move-large infinite 20s linear;
+    }
+}
