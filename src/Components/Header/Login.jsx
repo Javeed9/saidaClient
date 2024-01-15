@@ -6,7 +6,7 @@ import { toast } from 'react-toastify';
 function Login({ setIsLoginVisible }) {
   const baseurl = import.meta.env.VITE_BACKEND_ROUTE + "login";
   const [username, setUsername] = useState("");
-  const [password, setpassword] = useState("");
+  const [password, setPassword] = useState("");
   const { setIsAdmin } = useAuth();
 
   const handleSubmit = (event) => {
