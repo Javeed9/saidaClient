@@ -10,7 +10,7 @@ function CatalogueCard({ name, imageSrc }) {
           src={imageSrc}
           alt="catalougeImage"
         />
-        <h2 className="text-center text-lg mt-3 bg-black font-bold text-white">{name}</h2>
+        <h2 className="text-center text-lg mt-3 font-bold">{name}</h2>
       </div>
     </Link>
   );
