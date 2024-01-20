@@ -23,7 +23,7 @@ export const uploadHandler = (event, category, description, loadingEffect, setIs
       })
       formData.append('category',category)
       formData.append('description',description)
-      loadingEffect(10000);
+      loadingEffect(30000);
       axios.post(import.meta.env.VITE_BACKEND_ROUTE + 'catalog', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
