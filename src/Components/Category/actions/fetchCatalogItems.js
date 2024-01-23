@@ -2,14 +2,13 @@ import axios from 'axios';
 
 export const fetchCatalogItems = async (category, setPhotos, loadingEffect, setIsLoading ,pageNumber, incrementPageNumber, setShowMore) => {
   try {
-        loadingEffect(5000);
+        loadingEffect(20000);
         const response = await axios.get(import.meta.env.VITE_BACKEND_ROUTE + `catalog/${category}`,
             {  params: {
               pageNumber: pageNumber,
                         }
             });
           setPhotos( prev => {
-            // const newItems = response.data.filter(newItem => !prev.some(existingItem => existingItem.id === newItem.id));
             return [...prev, ...response.data];
           })
         if (response.data[0].showMore){
